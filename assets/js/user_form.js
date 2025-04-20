@@ -1,7 +1,6 @@
 $(document).ready(function () {
     addUser();
     updateUser();
-    deleteUser();
     getAllUsers();
 });
 
@@ -59,31 +58,7 @@ function updateUser() {
     });
 }
 
-function deleteUser() {
-    $('#delete_user_form').on('submit', function (e) {
-        e.preventDefault();
-        let formData = new FormData(this);
-        formData.append('action', 'deleteUser'); 
-        $.ajax({
-            type: 'POST',
-            url: '../../../student_management/functions/user_functions.php',
-            data: formData,
-            processData: false,
-            contentType: false,
-            success: function (response) {
-                if (response.success) {
-                    alert('User deleted successfully!');
-                    $('#delete_user_form')[0].reset();
-                } else {
-                    alert('Error deleting user: ' + response.message);
-                }
-            },
-            error: function (xhr, status, error) {
-                alert('An error occurred: ' + error);
-            }
-        });
-    });
-}
+
 
 function getAllUsers() {
     $.ajax({

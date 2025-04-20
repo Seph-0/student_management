@@ -9,27 +9,23 @@
             <div class="container">
                 <div class="row">
                     <div class="col-3 d-flex justify-content-center align-items-center">
-                        <img id="view_user_image_preview" src="../../student_management/uploads/users/<?php echo $user['user_image'] ?? 'default_user.jpg'; ?>" height="75px" alt="">
+                        <img id="view_user_image" height="75px" alt="">
                     </div>
                 </div>
                 <div class="row">
-                    <h5>User Number:<?php echo $user['user_number'] ?? ''; ?></h5>
-                    <h5>Name: <?php echo $user['first_name'] . ' ' . $user['middle_name'] . ' ' . $user['last_name'] ?? ''; ?></h5>
+                    <h5 class="fw-semibold" id="view_user_number"></h5>
+                    <h5 class="fw-semibold" id="view_name"></h5>
                 </div>
                 <div class="row">
-                    <h5>Address: <?php echo $user['address'] ?? ''; ?></h5>
-                    <h5>Sex: <?php echo $user['sex'] ?? ''; ?></h5>
-                    <h5>Date of Birth: <?php echo $user['birthdate'] ?? ''; ?></h5>
+                    <h5 class="fw-semibold" id="view_address"></h5>
+                    <h5 class="fw-semibold" id="view_sex"></h5>
+                    <h5 class="fw-semibold" id="view_birthdate"></h5>
                 </div>
                 <div class="row">
-                    <h5>Email: <?php echo $user['email'] ?? ''; ?></h5>
-                    <h5>Phone: <?php echo $user['phone'] ?? ''; ?></h5>
+                    <h5 class="fw-semibold" id="view_email"></h5>
+                    <h5 class="fw-semibold" id="view_phone"></h5>
                 </div>
             </div>
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
         </div>
         </div>
     </div>

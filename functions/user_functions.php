@@ -13,8 +13,11 @@
             $userRows .= '<td>' . htmlspecialchars($user['first_name'] . ' ' . $user['middle_name'] . ' ' . $user['last_name']) . '</td>';
             $userRows .= '<td>
             <button class="btn btn-primary view_user_btn" id="view_user_btn" data-bs-toggle="modal" data-bs-target="#viewUserModal" data-id="' . htmlspecialchars($user['id']) . '">View</button>
+
             <button class="btn btn-success edit_user_btn" id="edit_user_btn" data-bs-toggle="modal" data-bs-target="#editUserModal" data-id="' . htmlspecialchars($user['id']) . '">Edit</button>
-            <button class="btn btn-danger" id="delete_user_btn" data-id="' . htmlspecialchars($user['id']) . '">Delete</button></td>';
+
+            <button class="btn btn-danger delete_user_btn" id="delete_user_btn" data-id="' . htmlspecialchars($user['id']) . '">Delete</button></td>';
+            
             $userRows .= '</tr>';
         }
         echo json_encode(['success' => true, 'data' => $userRows]);
@@ -128,9 +131,9 @@
     }
 
     function deleteUser($conn) {
-        $user_id = $_POST['user_id'];
+        $user_id = $_POST['id'];
 
-        $stmt = $conn->prepare("DELETE FROM users WHERE user_id=?");
+        $stmt = $conn->prepare("DELETE FROM users WHERE id=?");
         $stmt->bind_param("i", $user_id);
 
         $stmt->execute();
