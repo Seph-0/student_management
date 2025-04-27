@@ -1,7 +1,9 @@
 :root {
-    --bs-primary: #1A2D42;
-    --bs-secondary: #2E4156;
+    --bs-primary: #2E4156;
+    --bs-secondary: #AAB7B7;
     --bs-tertiary: #AAB7B7;
+    --bs-dark: #1A2D42;
+    --bs-light: #D4D8DD;
 }
 
 .bg-primary {
@@ -44,4 +46,37 @@
     background-color: var(--bs-tertiary) !important;
     border-color: var(--bs-tertiary) !important;
     color: white !important;
+}
+
+.text-dark {
+    color: var(--bs-dark) !important;
+}
+
+.bg-dark {
+    background-color: var(--bs-dark) !important;
+}
+
+.btn-dark {
+    background-color: var(--bs-dark) !important;
+    border-color: var(--bs-dark) !important;
+    color: white !important;
+}
+
+.text-light {
+    color: var(--bs-light) !important;
+}
+
+.bg-light {
+    background-color: var(--bs-light) !important;
+}
+
+.btn-light {
+    background-color: var(--bs-light) !important;
+    border-color: var(--bs-light) !important;
+    color: var(--bs-dark) !important;
+}
+
+.active {
+    background-color: var(--bs-light) !important;
+    color: var(--bs-dark) !important;
 }

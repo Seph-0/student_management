@@ -17,11 +17,12 @@
 </head>
 <body>
     <header>
-        <nav class="navbar bg-tertiary">
+        <nav class="navbar bg-dark navbar-expand-lg">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img src="../assets/media/logo-light.png" height="50"  alt="">
-                </a>
+                <div class=" text-white" href="#">
+                <button class="btn btn-dark" type="button"><i class="fa-solid fa-bars"></i></button> 
+                <a class="navbar-brand fw-semibold text-white mb-0" href="">Dashboard </a>
+            </div>
             </div>
         </nav>
     </header>
